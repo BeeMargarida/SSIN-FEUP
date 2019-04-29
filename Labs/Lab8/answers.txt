@@ -1,0 +1,9 @@
+1. 
+Line 1 accesses the elgg object and returns the ts token, which is an identifier of the current user.
+Line 2 accesses the user token. 
+
+This variables are necessary to make a friend request.
+
+2.
+VERIFY!!
+I think it's not possible because the text added to the Text Mode is converted into html, therefore adding <p> tags to each line. 

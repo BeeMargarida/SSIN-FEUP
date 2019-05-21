@@ -320,11 +320,11 @@ static void auto_config() {
   debug(INFO, "Auto configuration\n");
   detect_fault_handling();
   detect_flush_reload_threshold();
-  config.measurements = 3;
-  config.accept_after = 1;
-  config.load_threads = 1;
-  config.load_type = NOP;
-  config.retries = 10000;
+  config.measurements = 10;
+  config.accept_after = 3;
+  config.load_threads = 3;
+  config.load_type = YIELD;
+  config.retries = 40000;
   config.physical_offset = DEFAULT_PHYSICAL_OFFSET;
 }
 

@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include <utils.h>
 #include "libkdump.h" 
 
 
@@ -20,7 +19,7 @@ int main(int argc, char *argv[]){
   printf("Secret: %s\n", secret);
 
   // Retrieves the physical address of a virtual address
-  size_t paddr = virt_to_phys((size_t)secret);
+  size_t paddr = libkdump_virt_to_phys((size_t)secret);
   
   /*if (!paddr) {
     printf("\x1b[31;1m[!]\x1b[0m Program requires root privileges (or read access to /proc/<pid>/pagemap)!\n");
@@ -28,7 +27,7 @@ int main(int argc, char *argv[]){
     exit(1);
   }*/
 
-  printf("Physical address of secret: %zx\n", paddr);
+  printf("Physical address of secret: 0x%zx\n", paddr);
   printf("Click CTRL+C to exit\n");
   
   while (1) {

@@ -1,4 +1,4 @@
-override CFLAGS += -O3 -pthread -Wno-attributes
+override CFLAGS += -O3 -pthread -Wno-attributes -D USE_RDTSCP -D MELTDOWN=meltdown
 CC=gcc
 
 all: libkdump.a libkdump.so

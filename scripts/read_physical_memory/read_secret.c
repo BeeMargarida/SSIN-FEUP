@@ -14,9 +14,6 @@ int main(int argc, char *argv[]) {
 
   libkdump_config_t config;
   config = libkdump_get_autoconfig();
-  /*if (argc > 2) {
-    config.physical_offset = strtoull(argv[2], NULL, 0);
-  }*/
 
   libkdump_init(config);
 

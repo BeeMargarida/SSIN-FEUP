@@ -20,15 +20,9 @@ int main(int argc, char *argv[]){
 
   // Retrieves the physical address of a virtual address
   size_t paddr = libkdump_virt_to_phys((size_t)secret);
-  
-  /*if (!paddr) {
-    printf("\x1b[31;1m[!]\x1b[0m Program requires root privileges (or read access to /proc/<pid>/pagemap)!\n");
-    libkdump_cleanup();
-    exit(1);
-  }*/
 
   printf("Physical address of secret: 0x%zx\n", paddr);
-  printf("Click CTRL+C to exit\n");
+  printf("CTRL+C to exit\n");
   
   while (1) {
     // keep string cached for better results
